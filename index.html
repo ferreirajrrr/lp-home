@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Digital Studio | Landing Pages & Sites de Alta Performance</title>
+    <meta name="description" content="Desenvolvimento acelerado de Landing Pages e Sites de alta conversão para pequenas e médias empresas. Design premium e entregas em até 72 horas.">
+    <meta name="theme-color" content="#090d14">
+    <meta property="og:title" content="AURA Digital Studio | Sites & Landing Pages que Vendem">
+    <meta property="og:description" content="Eleve a presença digital do seu negócio com uma Landing Page moderna, ultrarrápida e otimizada para dispositivos móveis.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cursor Custom -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Background Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="container header-container">
+
+            <!-- Logo SVG Inline -->
+            <a href="#" class="logo" aria-label="AURA Digital Studio">
+                <svg class="logo-svg" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#10b981"/>
+                            <stop offset="100%" stop-color="#06b6d4"/>
+                        </linearGradient>
+                        <filter id="glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                    </defs>
+                    <!-- A mark -->
+                    <polygon points="22,6 38,38 31,38 22,18 13,38 6,38" stroke="url(#logoGrad)" stroke-width="2.5" fill="none" stroke-linejoin="round" filter="url(#glow)"/>
+                    <line x1="10" y1="29" x2="34" y2="29" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/>
+                    <!-- AURA text -->
+                    <text x="50" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="22" fill="#f8fafc" letter-spacing="5">AURA</text>
+                    <!-- Separator line -->
+                    <rect x="50" y="37" width="165" height="1" rx="0.5" fill="url(#logoGrad)" opacity="0.5"/>
+                    <!-- Subtitle -->
+                    <text x="52" y="48" font-family="'Inter', sans-serif" font-weight="300" font-size="8" fill="#94a3b8" letter-spacing="3">DIGITAL STUDIO</text>
+                </svg>
+            </a>
+
+            <div class="header-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Vagas abertas este mês</span>
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#calculadora" class="nav-link">Orçamento</a>
+                <a href="#portfolio" class="nav-link">Portfólio</a>
+                <a href="#processo" class="nav-link">Como Funciona</a>
+                <a href="#faq" class="nav-link">Dúvidas</a>
+            </nav>
+
+            <a href="#calculadora" class="btn btn-primary nav-cta">Solicitar Proposta</a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="pill-badge magnetic">
+                        <span class="pill-icon">🚀</span>
+                        <span>Feito para Pequenas e Médias Empresas</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Landing Pages <span class="gradient-text">Premium</span><br>
+                        Que Convertem Visitantes<br>em Clientes Reais
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Desenvolvemos Landing Pages e sites de alta performance <strong>exclusivamente para pequenas e médias empresas</strong> que querem vender mais na internet — com design sofisticado, código limpo e entrega ágil em até <strong>72 horas</strong>.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#calculadora" class="btn btn-primary btn-lg magnetic">
+                            <span>Simular Orçamento</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20desenvolvimento%20de%20site." target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg magnetic">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                            <span>Falar no WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">100 / 100</span>
+                            <span class="metric-label">Google PageSpeed</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-value">72 Horas</span>
+                            <span class="metric-label">Prazo Inicial Garantido</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-value">100%</span>
+                            <span class="metric-label">Responsivo no Celular</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Mockup -->
+                <div class="hero-visual" id="heroVisual">
+                    <div class="glass-card hero-preview-card" id="heroCard">
+                        <div class="card-header-bar">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="window-title">suaempresa.com.br</div>
+                            <div class="window-badge">NO AR</div>
+                        </div>
+                        <div class="card-preview-body">
+                            <div class="preview-hero-mock">
+                                <div class="mock-tag">PRESENÇA DE IMPACTO</div>
+                                <h3>Sua Marca com Autoridade Digital</h3>
+                                <p>Carregamento ultrarrápido com botão direto de atendimento.</p>
+                                <div class="mock-btn-group">
+                                    <div class="mock-btn primary">Solicitar Orçamento</div>
+                                    <div class="mock-btn secondary">Conhecer Serviços</div>
+                                </div>
+                            </div>
+                            <div class="preview-metrics-grid">
+                                <div class="mini-stat">
+                                    <span class="stat-number">+340%</span>
+                                    <span class="stat-text">Mais Oportunidades</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-number">0.4s</span>
+                                    <span class="stat-text">Abertura Instantânea</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-badge" id="floatingBadge">
+                            <div class="badge-icon">💎</div>
+                            <div class="badge-info">
+                                <strong>Código Sob Medida</strong>
+                                <span>Máximo desempenho e segurança</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DIFERENCIAIS ===================== -->
+        <section class="section" id="diferenciais">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">POR QUE A AURA DIGITAL</span>
+                    <h2 class="section-title">A Agência Certa para Pequenas e Médias Empresas</h2>
+                    <p class="section-desc">Sabemos que o orçamento e o tempo da sua empresa são limitados. Por isso, entregamos resultados reais com agilidade, preço justo e sem burocracia — do briefing ao site no ar.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="glass-card feature-card tilt-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Velocidade Extrema</h3>
+                        <p>Código leve e nativo. Sua página carrega em menos de 1 segundo, retendo cada visitante que chega pelo seu anúncio.</p>
+                    </div>
+                    <div class="glass-card feature-card tilt-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>Design Exclusivo e Sofisticado</h3>
+                        <p>Layouts modernos e visualmente impactantes, criados para transmitir autoridade e profissionalismo desde o primeiro acesso.</p>
+                    </div>
+                    <div class="glass-card feature-card tilt-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>Desenvolvimento Acelerado por IA</h3>
+                        <p>Processo otimizado por inteligência artificial, reduzindo o tempo de entrega sem abrir mão da qualidade do código.</p>
+                    </div>
+                    <div class="glass-card feature-card tilt-card">
+                        <div class="feature-icon">📲</div>
+                        <h3>Foco em Conversão Direta</h3>
+                        <p>Botões e estruturas posicionados estrategicamente para conduzir o visitante ao contato imediato com a sua equipe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CALCULADORA ===================== -->
+        <section class="section section-dark" id="calculadora">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">TRANSPARÊNCIA E FACILIDADE</span>
+                    <h2 class="section-title">Simulador de Investimento em Tempo Real</h2>
+                    <p class="section-desc">Selecione as opções do seu projeto e confira a estimativa de valor e prazo instantaneamente.</p>
+                </div>
+
+                <div class="glass-card calculator-wrapper">
+                    <div class="calculator-steps">
+
+                        <!-- Passo 1 -->
+                        <div class="calc-group">
+                            <label class="calc-label">1. Selecione o Tipo de Projeto:</label>
+                            <div class="options-grid" id="typeOptions">
+                                <button type="button" class="option-card active" data-type="lp" data-price="690" data-time="3 a 4 dias úteis">
+                                    <div class="option-header">
+                                        <span class="option-title">Landing Page de Vendas</span>
+                                        <span class="option-badge">Recomendado</span>
+                                    </div>
+                                    <p class="option-desc">Página focada em converter tráfego e anúncios em novos contatos diretos no WhatsApp.</p>
+                                    <span class="option-price">A partir de R$ 690</span>
+                                </button>
+                                <button type="button" class="option-card" data-type="site" data-price="1290" data-time="5 a 7 dias úteis">
+                                    <div class="option-header">
+                                        <span class="option-title">Site Institucional Completo</span>
+                                    </div>
+                                    <p class="option-desc">Estrutura multi-seções: Home, Empresa, Serviços, Portfólio e Contato.</p>
+                                    <span class="option-price">A partir de R$ 1.290</span>
+                                </button>
+                                <button type="button" class="option-card" data-type="redesign" data-price="590" data-time="3 a 4 dias úteis">
+                                    <div class="option-header">
+                                        <span class="option-title">Redesign & Modernização</span>
+                                    </div>
+                                    <p class="option-desc">Reformulação visual completa e melhoria de velocidade em um site já existente.</p>
+                                    <span class="option-price">A partir de R$ 590</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Passo 2 -->
+                        <div class="calc-group">
+                            <label class="calc-label">2. Recursos Adicionais (Opcional):</label>
+                            <div class="addons-grid" id="addonOptions">
+                                <label class="addon-checkbox">
+                                    <input type="checkbox" value="seo" data-name="Otimização SEO para o Google" data-price="150" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="addon-info">
+                                        <strong>Otimização SEO para o Google</strong>
+                                        <small>Melhore seu posicionamento orgânico (+ R$ 150)</small>
+                                    </span>
+                                </label>
+                                <label class="addon-checkbox">
+                                    <input type="checkbox" value="form" data-name="Formulário de Captura por E-mail" data-price="100">
+                                    <span class="checkmark"></span>
+                                    <span class="addon-info">
+                                        <strong>Formulário de Captura por E-mail</strong>
+                                        <small>Receba dados dos leads na sua caixa de entrada (+ R$ 100)</small>
+                                    </span>
+                                </label>
+                                <label class="addon-checkbox">
+                                    <input type="checkbox" value="copy" data-name="Redação de Textos (Copywriting)" data-price="200" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="addon-info">
+                                        <strong>Redação de Textos (Copywriting)</strong>
+                                        <small>Elaboração profissional focada em conversão (+ R$ 200)</small>
+                                    </span>
+                                </label>
+                                <label class="addon-checkbox">
+                                    <input type="checkbox" value="domain" data-name="Configuração de Domínio e SSL" data-price="100">
+                                    <span class="checkmark"></span>
+                                    <span class="addon-info">
+                                        <strong>Configuração de Domínio e SSL</strong>
+                                        <small>Instalação do seu endereço `.com.br` com certificado de segurança (+ R$ 100)</small>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Passo 3: Manutenção Mensal -->
+                        <div class="calc-group">
+                            <label class="calc-label">3. Plano de Acompanhamento Mensal (Opcional):</label>
+                            <div class="maintenance-options" id="maintenanceOptions">
+                                <button type="button" class="maintenance-card" data-plan="none" data-m-price="0" data-m-name="Sem plano mensal">
+                                    <div class="m-header">
+                                        <span class="m-title">Sem Manutenção</span>
+                                    </div>
+                                    <p class="m-desc">Entrega única do projeto, sem vínculo mensal.</p>
+                                    <span class="m-price">R$ 0/mês</span>
+                                </button>
+                                <button type="button" class="maintenance-card active" data-plan="essencial" data-m-price="99" data-m-name="Plano Essencial">
+                                    <div class="m-header">
+                                        <span class="m-title">Plano Essencial</span>
+                                        <span class="option-badge">Popular</span>
+                                    </div>
+                                    <p class="m-desc">Monitoramento de desempenho, backup mensal e até 2 ajustes de conteúdo por mês.</p>
+                                    <span class="m-price">R$ 99/mês</span>
+                                </button>
+                                <button type="button" class="maintenance-card" data-plan="premium" data-m-price="179" data-m-name="Plano Premium">
+                                    <div class="m-header">
+                                        <span class="m-title">Plano Premium</span>
+                                    </div>
+                                    <p class="m-desc">Tudo do Essencial + relatório mensal de acesso, atualizações de SEO e suporte prioritário.</p>
+                                    <span class="m-price">R$ 179/mês</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="calculator-summary">
+                        <div class="summary-card">
+                            <h3>Resumo da Estimativa</h3>
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span>Projeto:</span>
+                                    <strong id="selectedTypeName">Landing Page de Vendas</strong>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Prazo:</span>
+                                    <strong id="estimatedTime">3 a 4 dias úteis</strong>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Recursos:</span>
+                                    <span id="selectedAddonsList" class="addons-list-badge">SEO para Google, Copywriting</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Manutenção:</span>
+                                    <span id="selectedMaintenance" class="addons-list-badge">Plano Essencial</span>
+                                </div>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-total">
+                                <div class="total-row">
+                                    <span>Investimento Único:</span>
+                                    <div class="total-price" id="totalPriceDisplay">R$ 1.040,00</div>
+                                </div>
+                                <div class="total-row monthly" id="monthlyRow">
+                                    <span>Mensalidade:</span>
+                                    <div class="monthly-price" id="monthlyPriceDisplay">+ R$ 99/mês</div>
+                                </div>
+                                <small>*Pagamento facilitado no PIX ou Cartão de Crédito</small>
+                            </div>
+                            <a href="#" id="calcSendWhatsapp" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block btn-lg">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                                <span>Enviar Proposta via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PORTFÓLIO ===================== -->
+        <section class="section" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">DEMONSTRAÇÃO PRÁTICA</span>
+                    <h2 class="section-title">Modelos e Projetos de Exemplo</h2>
+                    <p class="section-desc">Conheça estilos de layouts desenvolvidos para diferentes segmentos de negócio.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="glass-card portfolio-card tilt-card">
+                        <div class="portfolio-thumb thumb-clinica">
+                            <span class="project-category">Saúde & Bem-Estar</span>
+                        </div>
+                        <div class="portfolio-body">
+                            <h3>Clínicas e Consultórios</h3>
+                            <p>Landing page médica desenvolvida para gerar agendamentos rápidos com visual acolhedor e seguro.</p>
+                            <div class="tech-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">WhatsApp API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card portfolio-card tilt-card">
+                        <div class="portfolio-thumb thumb-portfolio">
+                            <span class="project-category">Serviços & Consultoria</span>
+                        </div>
+                        <div class="portfolio-body">
+                            <h3>Prestadores de Serviço</h3>
+                            <p>Estrutura voltada a advogados, corretores e consultores que buscam consolidar autoridade e gerar orçamentos.</p>
+                            <div class="tech-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">Glassmorphism</span>
+                                <span class="tag">JS Interativo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-card portfolio-card tilt-card">
+                        <div class="portfolio-thumb thumb-mkt">
+                            <span class="project-category">Negócios & Comércio Local</span>
+                        </div>
+                        <div class="portfolio-body">
+                            <h3>Empresas & Comércio Local</h3>
+                            <p>Página com foco em conversão local, apresentação de produtos e serviços e contato facilitado.</p>
+                            <div class="tech-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS Grid</span>
+                                <span class="tag">Copywriting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROCESSO ===================== -->
+        <section class="section section-dark" id="processo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">SIMPLES COMO DEVE SER</span>
+                    <h2 class="section-title">Processo 100% Pensado para PMEs</h2>
+                    <p class="section-desc">Sabemos que você não tem tempo a perder. Por isso o processo é direto, sem reuniões intermináveis — do briefing ao site publicado em três etapas.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step-card">
+                        <div class="step-number">01</div>
+                        <h3>Briefing Rápido</h3>
+                        <p>Alinhamos via WhatsApp os objetivos do seu negócio, ofertas principais e o estilo visual que melhor representa a sua marca.</p>
+                    </div>
+                    <div class="process-step-card">
+                        <div class="step-number">02</div>
+                        <h3>Desenvolvimento & Aprovação</h3>
+                        <p>Criamos a página em código limpo e apresentamos o link de prévia dentro do prazo acordado para você revisar e aprovar.</p>
+                    </div>
+                    <div class="process-step-card">
+                        <div class="step-number">03</div>
+                        <h3>Publicação & Divulgação</h3>
+                        <p>Configuramos o seu domínio próprio (`.com.br`) e colocamos o site no ar, pronto para receber visitas e gerar contatos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FAQ ===================== -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">TIRA-DÚVIDAS</span>
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <p class="section-desc">Esclareça as principais dúvidas antes de iniciar o seu projeto conosco.</p>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Qual é o prazo de entrega da Landing Page?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O prazo padrão para a entrega da primeira versão é de <strong>3 a 4 dias úteis</strong> após o recebimento das informações do seu negócio (logotipo, textos e imagens).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Preciso contratar domínio e hospedagem antes?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não se preocupe com isso agora. Orientamos você no processo de registro do domínio (ex: `suaempresa.com.br`) e realizamos toda a configuração de publicação.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>O site funcionará bem em aparelhos celulares?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim. Todos os projetos são desenvolvidos com o conceito <strong>Mobile-First</strong>, garantindo navegação rápida, botões acessíveis e boa leitura em qualquer tamanho de tela.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>O que inclui o plano de manutenção mensal?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Os planos mensais incluem monitoramento de desempenho, backup regular do conteúdo, ajustes de texto e imagem conforme o plano contratado. O plano Premium adiciona relatórios de acesso e suporte prioritário.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Como é feito o pagamento?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Trabalhamos com <strong>50% na contratação</strong> e <strong>50% somente após aprovação final</strong> do projeto. Aceitamos PIX e Cartão de Crédito.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CTA FINAL ===================== -->
+        <section class="section section-cta">
+            <div class="container text-center">
+                <div class="glass-card cta-banner">
+                    <h2>Sua Pequena ou Média Empresa Merece um Site de Verdade</h2>
+                    <p>Não deixe seus clientes irem para a concorrência por falta de presença digital. Entre em contato agora e receba uma proposta personalizada, sem compromisso.</p>
+                    <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20site%20para%20minha%20empresa." target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg magnetic">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>Conversar no WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo" aria-label="AURA Digital Studio">
+                    <svg class="logo-svg" viewBox="0 0 220 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#10b981"/>
+                                <stop offset="100%" stop-color="#06b6d4"/>
+                            </linearGradient>
+                        </defs>
+                        <polygon points="22,6 38,38 31,38 22,18 13,38 6,38" stroke="url(#logoGrad2)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        <line x1="10" y1="29" x2="34" y2="29" stroke="url(#logoGrad2)" stroke-width="2" stroke-linecap="round"/>
+                        <text x="50" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="22" fill="#f8fafc" letter-spacing="5">AURA</text>
+                        <rect x="50" y="37" width="165" height="1" rx="0.5" fill="url(#logoGrad2)" opacity="0.5"/>
+                        <text x="52" y="48" font-family="'Inter', sans-serif" font-weight="300" font-size="8" fill="#94a3b8" letter-spacing="3">DIGITAL STUDIO</text>
+                    </svg>
+                </a>
+                <p>Especialistas em Landing Pages e sites institucionais de alta conversão para <strong>pequenas e médias empresas</strong> que querem crescer no ambiente digital.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#calculadora">Simulador de Orçamento</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Atendimento</h4>
+                <p class="contact-info">Atendimento em todo o Brasil via WhatsApp.</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/5581999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 AURA Digital Studio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5581999999999?text=Ol%C3%A1!%20Encontrei%20seu%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contato WhatsApp">
+        <span class="whatsapp-badge-pulse"></span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <span class="whatsapp-tooltip">Atendimento via WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
