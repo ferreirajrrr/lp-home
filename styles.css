@@ -857,7 +857,7 @@ h1,h2,h3,h4 {
 .reveal-left.active, .reveal-right.active { opacity:1; transform:translateX(0); }
 
 /* ─────────────────────────────────────────
-   RESPONSIVE
+   RESPONSIVE (OTIMIZADO PARA MOBILE)
 ───────────────────────────────────────── */
 @media (max-width:1024px) {
     .hero-grid { grid-template-columns:1fr; gap:3rem; }
@@ -869,22 +869,57 @@ h1,h2,h3,h4 {
 }
 
 @media (max-width:768px) {
+    /* Cabeçalho e Navegação */
     .header-status { display:none; }
     .nav-menu {
-        position:fixed; top:68px; left:0; width:100%;
+        position:fixed; top:75px; left:0; width:100%;
         background:rgba(9,13,20,0.98);
         backdrop-filter:blur(20px);
+        -webkit-backdrop-filter:blur(20px);
         flex-direction:column; padding:2rem 0; gap:1.5rem;
         border-bottom:1px solid var(--border-glass);
-        transform:translateY(-130%);
-        transition:transform 0.35s var(--ease-out);
+        transform:translateY(-150%);
+        transition:transform 0.35s cubic-bezier(0.16,1,0.3,1);
+        z-index: 99;
     }
     .nav-menu.active  { transform:translateY(0); }
-    .mobile-toggle { display:flex; }
+    .mobile-toggle { display:flex; z-index: 101; }
+    
+    /* Animação do ícone hambúrguer */
+    .mobile-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .mobile-toggle.active span:nth-child(2) { opacity: 0; }
+    .mobile-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .nav-cta { display:none; }
+
+    /* Espaçamentos e Tipografia Gerais */
+    .section { padding: 4rem 0; }
+    .section-title { font-size: 1.8rem; }
+    
+    /* Hero Section */
+    .hero-section { padding-top: 7rem; padding-bottom: 3rem; }
     .hero-title { font-size:2.1rem; }
     .hero-actions { flex-direction:column; align-items:stretch; }
     .btn-lg { width:100%; }
-    .hero-metrics { flex-wrap:wrap; gap:1.25rem; }
+    .hero-metrics { flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
     .metric-divider { display:none; }
+    .card-preview-body { padding: 1rem; }
+    .preview-metrics-grid { grid-template-columns: 1fr; }
+
+    /* Força empilhamento em telas pequenas */
+    .features-grid, 
+    .options-grid, 
+    .addons-grid, 
+    .maintenance-options, 
+    .portfolio-grid, 
+    .process-steps {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Ajustes de Calculadora e Outros */
+    .calculator-wrapper { padding: 1.5rem; }
+    .cta-banner { padding: 2rem 1.5rem; }
+    .cta-banner h2 { font-size: 1.6rem; }
+    
+    /* Oculta os cursores customizados no mobile para evitar falhas no toque */
+    .cursor-dot, .cursor-ring { display: none !important; }
 }
