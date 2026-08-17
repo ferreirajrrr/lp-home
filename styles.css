@@ -868,8 +868,9 @@ h1,h2,h3,h4 {
     .footer-content { grid-template-columns:1fr; gap:2rem; }
 }
 
-@media (max-width:768px) {
-    /* Cabeçalho e Navegação */
+@media (max-width:960px) {
+    /* Cabeçalho e Navegação — ativa o menu hambúrguer já no tablet,
+       antes que logo + selo + links + botão comecem a vazar do cabeçalho */
     .header-status { display:none; }
     .nav-menu {
         position:fixed; top:75px; left:0; width:100%;
@@ -890,7 +891,9 @@ h1,h2,h3,h4 {
     .mobile-toggle.active span:nth-child(2) { opacity: 0; }
     .mobile-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .nav-cta { display:none; }
+}
 
+@media (max-width:768px) {
     /* Espaçamentos e Tipografia Gerais */
     .section { padding: 4rem 0; }
     .section-title { font-size: 1.8rem; }
