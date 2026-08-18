@@ -619,6 +619,41 @@ h1,h2,h3,h4 {
 .summary-total small { display:block; font-size:0.75rem; color:var(--text-muted); }
 
 /* ─────────────────────────────────────────
+   ESTATÍSTICAS (DADOS COM FONTE)
+───────────────────────────────────────── */
+.stats-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.75rem;
+}
+.stat-card {
+    padding:2.25rem 1.75rem;
+    text-align:center;
+    transition:border-color 0.3s ease, transform 0.3s var(--ease-out);
+}
+.stat-card:hover { border-color:rgba(16,185,129,0.3); transform:translateY(-4px); }
+.stat-figure {
+    display:block;
+    font-family:var(--font-heading);
+    font-size:2.75rem; font-weight:800;
+    color:var(--primary);
+    line-height:1; margin-bottom:1rem;
+}
+.stat-desc { color:var(--text-secondary); font-size:0.92rem; line-height:1.6; margin-bottom:1.25rem; }
+.stat-desc strong { color:var(--text-primary); }
+.stat-source {
+    display:inline-block;
+    font-size:0.75rem; font-weight:600;
+    color:var(--accent-cyan);
+    text-decoration:none;
+    border-top:1px solid var(--border-glass);
+    padding-top:0.9rem; width:100%;
+    transition:color 0.2s ease;
+}
+.stat-source:hover { color:var(--primary); }
+.stats-footnote { font-size:0.78rem; color:var(--text-muted); text-align:center; margin-top:2.5rem; opacity:0.8; max-width:640px; margin-left:auto; margin-right:auto; }
+
+/* ─────────────────────────────────────────
    PORTFOLIO
 ───────────────────────────────────────── */
 .portfolio-grid {
