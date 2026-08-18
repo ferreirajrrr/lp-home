@@ -6,46 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const WHATSAPP = '5581999999999';
-
-    /* ─────────────────────────────────────────
-       1. CUSTOM CURSOR
-       (só roda em telas com mouse de verdade — evita
-       loop infinito consumindo bateria/CPU no celular)
-    ───────────────────────────────────────── */
-    const hasRealMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-    if (hasRealMouse) {
-        const cursorDot  = document.getElementById('cursorDot');
-        const cursorRing = document.getElementById('cursorRing');
-        let mouseX = 0, mouseY = 0;
-        let ringX  = 0, ringY  = 0;
-
-        document.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            cursorDot.style.left = mouseX + 'px';
-            cursorDot.style.top  = mouseY + 'px';
-        });
-
-        // Lagged ring animation
-        (function animateRing() {
-            ringX += (mouseX - ringX) * 0.12;
-            ringY += (mouseY - ringY) * 0.12;
-            cursorRing.style.left = ringX + 'px';
-            cursorRing.style.top  = ringY + 'px';
-            requestAnimationFrame(animateRing);
-        })();
-
-        // Hover states on interactive elements
-        const hoverTargets = document.querySelectorAll(
-            'a, button, .option-card, .maintenance-card, .addon-checkbox, .faq-question, .tilt-card'
-        );
-        hoverTargets.forEach(el => {
-            el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-            el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-        });
-    }
+    const WHATSAPP = '5585981562086';
 
     /* ─────────────────────────────────────────
        2. HEADER SCROLL
