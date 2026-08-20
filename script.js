@@ -127,25 +127,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let addonsTotal = 0;
         let addonsNames = [];
+        let addonsMonthlyTotal = 0;
+        let addonsMonthlyNames = [];
         addonInputs.forEach(inp => {
             if (inp.checked) {
                 addonsTotal += +inp.dataset.price || 0;
                 addonsNames.push(inp.dataset.name || inp.value);
+                // Alguns recursos (como Google Ads) têm parte única + parte mensal
+                if (inp.dataset.monthly) {
+                    addonsMonthlyTotal += +inp.dataset.monthly || 0;
+                    addonsMonthlyNames.push(inp.dataset.monthlyName || `Mensalidade de ${inp.dataset.name}`);
+                }
             }
         });
 
         const grand = basePrice + addonsTotal;
+        const monthlyGrand = planPrice + addonsMonthlyTotal;
 
         if (elTypeName)    elTypeName.textContent    = typeName;
         if (elTime)        elTime.textContent         = timeEst;
         if (elAddons)      elAddons.textContent       = addonsNames.length ? addonsNames.join(', ') : 'Nenhum recurso extra';
-        if (elMaintenance) elMaintenance.textContent  = planName || 'Sem plano mensal';
+
+        // Junta plano de manutenção + mensalidades de recursos (ex: gestão de Ads) num só resumo
+        const maintenanceParts = [];
+        if (planPrice > 0) maintenanceParts.push(planName);
+        maintenanceParts.push(...addonsMonthlyNames);
+        if (elMaintenance) elMaintenance.textContent = maintenanceParts.length ? maintenanceParts.join(' + ') : 'Sem plano mensal';
+
         if (elTotal)       elTotal.textContent        = `R$ ${grand.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
 
         if (monthlyRow) {
-            if (planPrice > 0) {
+            if (monthlyGrand > 0) {
                 monthlyRow.classList.add('visible');
-                if (elMonthly) elMonthly.textContent = `+ R$ ${planPrice}/mês`;
+                if (elMonthly) elMonthly.textContent = `+ R$ ${monthlyGrand.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}/mês`;
             } else {
                 monthlyRow.classList.remove('visible');
             }
@@ -154,7 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // WhatsApp mensagem formatada
         if (waBtn) {
             const extras = addonsNames.length ? addonsNames.join(', ') : 'Nenhum';
-            const manut  = planPrice > 0 ? `${planName} (R$ ${planPrice}/m\u00eas)` : 'Sem plano mensal';
+            const manut  = monthlyGrand > 0
+                ? `${maintenanceParts.join(' + ')} (R$ ${monthlyGrand.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}/m\u00eas)`
+                : 'Sem plano mensal';
             const msg =
                 `Ol%C3%A1!%20Simulei%20meu%20projeto%20no%20site%3A%0A%0A` +
                 `%F0%9F%93%8D%20*Projeto%3A*%20${encodeURIComponent(typeName)}%0A` +
